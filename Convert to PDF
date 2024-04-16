@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+
+"""
+Convert selected markdown files to PDF using md_to_pdf. (Nautilus script)
+"""
+
+import os
+import subprocess
+
+
+def main():
+    """
+    Convert selected markdown files to PDF using md_to_pdf.
+    """
+    try:
+        # Read the variable NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
+        paths = os.environ.get('NAUTILUS_SCRIPT_SELECTED_FILE_PATHS')
+
+        # split the paths
+        paths = [path for path in paths.split('\n') if path]
+
+        # check if there is a css file
+        css_files = [path for path in paths
+                     if os.path.splitext(path)[1] == '.css']
+
+        css_file = None
+        if len(css_files) == 1:
+            css_file = css_files[0]
+        elif len(css_files) > 1:
+            raise ValueError("Please select only one CSS file.")
+
+        # remove the css file from the paths
+        paths = [path for path in paths
+                 if path not in css_files]
+
+        for path in paths:
+
+            # Construct the command
+            cmd = ["markdown-convert", path]
+            if css_file is not None:
+                cmd.append(f'--css={css_file}')
+
+            # Call the command
+            subprocess.check_call(cmd)
+
+    except subprocess.CalledProcessError as e:
+        zenity_error(str(e))
+
+    except Exception as e:
+        zenity_error(str(e))
+
+
+def zenity_error(msg):
+    """
+    Show an error message using zenity.
+
+    Args:
+        msg (str): The message to show.
+    """
+    subprocess.call(["zenity", "--error", "--text", msg])
+
+
+if __name__ == '__main__':
+    main()
