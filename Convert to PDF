@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Convert selected markdown files to PDF using md_to_pdf. (Nautilus script)
+Convert selected markdown files to PDF using markdown-convert. (Nautilus script)
 """
 
 import os
@@ -10,7 +10,7 @@ import subprocess
 
 def main():
     """
-    Convert selected markdown files to PDF using md_to_pdf.
+    Convert selected markdown files to PDF using markdown-convert.
     """
     try:
         # Read the variable NAUTILUS_SCRIPT_SELECTED_FILE_PATHS
