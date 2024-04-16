@@ -10,7 +10,7 @@ _Nautilus script to add Markdown to PDF conversion to the right click menu._
 ## Installation
 
 ```bash
-mkdir -P ~/.local/share/nautilus/scripts/Markdown/
+mkdir -p ~/.local/share/nautilus/scripts/Markdown/
 wget https://raw.githubusercontent.com/Julynx/markdown_convert_nautilus/main/Convert%20to%20PDF -O ~/.local/share/nautilus/scripts/Markdown/Convert\ to\ PDF
 wget https://raw.githubusercontent.com/Julynx/markdown_convert_nautilus/main/Convert%20to%20PDF%20(live) -O ~/.local/share/nautilus/scripts/Markdown/Convert\ to\ PDF\ \(live\)
 chmod +x ~/.local/share/nautilus/scripts/Markdown/Convert\ to\ PDF
