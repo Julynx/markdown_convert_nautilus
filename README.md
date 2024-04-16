@@ -18,9 +18,6 @@ chmod +x ~/.local/share/nautilus/scripts/Markdown/Convert\ to\ PDF\ \(live\)
 
 ## Usage
 
-- Right click on a Markdown file and select `Scripts` > `Markdown` > `Convert to PDF`.
-
-- You can also select both a CSS file and a Markdown file by dragging your mouse or holding the CTRL key.
-  
-  When you click `Convert to PDF`, the selected CSS file will be passed to `markdown-convert` as `--css=<selected_css_file>`.
-
+- Right click on any Markdown file, then click `Scripts` > `Markdown` > `Convert to PDF`.
+- For real-time conversion to PDF, click `Scripts` > `Markdown` > `Convert to PDF (live)`.
+- You can also select both a CSS file and a Markdown file, and the output PDF will be styled with the selected CSS file.
