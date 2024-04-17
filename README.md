@@ -22,3 +22,18 @@ chmod +x ~/.local/share/nautilus/scripts/Markdown/Convert\ to\ PDF\ \(live\)
 - Right click on any Markdown file, then click `Scripts` > `Markdown` > `Convert to PDF`.
 - For real-time conversion to PDF, click `Scripts` > `Markdown` > `Convert to PDF (live)`.
 - You can also select a CSS file and a Markdown file, and the output PDF will be styled with the selected CSS file.
+
+## Uninstalling
+
+To remove the entries from the right click menu, run:
+
+```bash
+rm ~/.local/share/nautilus/scripts/Markdown/Convert\ to\ PDF
+rm ~/.local/share/nautilus/scripts/Markdown/Convert\ to\ PDF\ \(live\)
+```
+
+Run the following commands if you also wish to uninstall `markdown-convert`:
+
+```bash
+pip uninstall markdown-convert -y
+```
