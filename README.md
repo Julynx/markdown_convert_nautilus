@@ -34,7 +34,7 @@ rm ~/.local/share/nautilus/scripts/Markdown/Convert\ to\ PDF
 rm ~/.local/share/nautilus/scripts/Markdown/Convert\ to\ PDF\ \(live\)
 ```
 
-Run the following command if you also wish to uninstall `markdown-convert`:
+If you also wish to uninstall `markdown-convert`, run the following command:
 
 ```bash
 pip uninstall markdown-convert -y
